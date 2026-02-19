@@ -111,7 +111,7 @@ class DecisionStorage:
         abandoned = sum(1 for d in decisions if d["status"] == "abandoned")
         
         # 統計建議採納率
-       采纳_count = 0
+        采纳_count = 0
         for d in decisions:
             if d.get("result") and d.get("recommendation"):
                 if d["result"].lower() in ["接受", "同意", "去", "做"]:
