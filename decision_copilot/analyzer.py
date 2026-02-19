@@ -94,7 +94,7 @@ class DecisionAnalyzer:
             # 根據問題類型給分數
             if "薪水" in key or "報酬" in key or "高多少" in key:
                 try:
-                    percent = int(''.join(filter(str.isdigit, str(value))) or 0
+                    percent = int(''.join(filter(str.isdigit, str(value))) or 0)
                     if percent > 20:
                         pros.append(f"{key}提升 {percent}%")
                         score += 3
@@ -149,7 +149,7 @@ class DecisionAnalyzer:
             
             elif "承受" in key or "損失" in key:
                 try:
-                    percent = int(''.join(filter(str.isdigit, str(value))) or 0
+                    percent = int(''.join(filter(str.isdigit, str(value))) or 0)
                     if percent > 30:
                         score += 1
                 except:
